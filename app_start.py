@@ -39,7 +39,6 @@ if not os.path.exists(model_path):
 
 model = YOLO(model_path)
 
-
 col1, col2 = st.columns(2)
 
 with col1:
@@ -51,7 +50,6 @@ with col2:
     if st.button('Detect'):
         source_img = PIL.Image.open(source_img)
         res = model.predict(source_img)
-        # boxes = res[0].boxes
         res_plotted = res[0].plot()[:, :, ::-1]
         st.image(res_plotted, 
             caption='Detected Image',
