@@ -2,11 +2,6 @@
 
 from pathlib import Path
 import PIL
-# from ultralytics import YOLO
-# from PIL import Image
-# import streamlit as st
-# import cv2
-# import numpy as np
 import streamlit.components.v1 as components
 
 import streamlit as st
