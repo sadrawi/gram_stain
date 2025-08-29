@@ -42,9 +42,6 @@ if not os.path.exists(model_path):
 model = YOLO(model_path)
 
 
-# covid_model_path = Path('best_gramstain.pt')
-# covid_model = YOLO(covid_model_path)
-
 col1, col2 = st.columns(2)
 
 with col1:
