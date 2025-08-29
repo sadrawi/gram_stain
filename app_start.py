@@ -12,8 +12,6 @@ from ultralytics import YOLO
 import tempfile
 import os
 import requests
-# Load YOLOv8 segmentation model
-
 
 st.set_page_config(
     page_title="i3L AI System",
