@@ -19,7 +19,7 @@ st.set_page_config(
     initial_sidebar_state="auto"
 )
 
-image = Image.open('i3l_logo.png')
+image = Image.open('i3LUniversity.png')
 
 col1, col2 = st.columns([1,3])
 with col1:
