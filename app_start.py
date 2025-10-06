@@ -19,7 +19,13 @@ st.set_page_config(
     initial_sidebar_state="auto"
 )
 
-image = Image.open('i3LUniversity.png')
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image("i3LUniversity.png", 
+             use_container_width=True)
+
+
+# image = Image.open('i3LUniversity.png')
 
 st.markdown(
     "<h1 style='text-align: center;'>AI-based Gram Staining Detection</h1>",
