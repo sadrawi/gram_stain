@@ -21,13 +21,10 @@ st.set_page_config(
 
 image = Image.open('i3LUniversity.png')
 
-col1, col2 = st.columns([1,3])
-with col1:
-    st.image(image)
-with col2:
-    st.title("i3L AI-based Gram Staining Detection")
-
-
+st.markdown(
+    "<h1 style='text-align: center;'>AI-based Gram Staining Detection</h1>",
+    unsafe_allow_html=True
+)
 classes = ["Bacilli_N", "Bacilli_P", "Cocci_N", "Cocci_P", "Fungus"]
 
 model_path = "best_gramstain.pt"
