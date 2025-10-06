@@ -42,6 +42,8 @@ if not os.path.exists(model_path):
 
 model = YOLO(model_path)
 
+# ...existing code...
+
 col1, col2 = st.columns(2)
 
 with col1:
@@ -50,13 +52,20 @@ with col1:
         type=("jpg", "jpeg", "png"))
 
 with col2:
-    if st.button('Detect'):
-        source_img = PIL.Image.open(source_img)
-        res = model.predict(source_img)
-        res_plotted = res[0].plot()[:, :, ::-1]
-        st.image(res_plotted, 
-            caption='Detected Image',
-            use_container_width =True  )
+    detect_clicked = st.button('Detect')
+
+if source_img is not None and detect_clicked:
+    raw_img = PIL.Image.open(source_img)
+    res = model.predict(raw_img)
+    res_plotted = res[0].plot()[:, :, ::-1]
+
+    col_raw, col_detected = st.columns(2)
+    with col_raw:
+        st.image(raw_img, caption="Raw Image", use_container_width=True)
+    with col_detected:
+        st.image(res_plotted, caption="Classification Result", use_container_width=True)
+
+# ...existing code...
 
 
 
