@@ -44,14 +44,14 @@ model = YOLO(model_path)
 
 # ...existing code...
 
+# ...existing code...
+
 col1, col2 = st.columns(2)
 
 with col1:
     source_img = st.file_uploader(
         "Choose an image...", 
         type=("jpg", "jpeg", "png"))
-
-with col2:
     detect_clicked = st.button('Detect')
 
 if source_img is not None and detect_clicked:
@@ -64,6 +64,8 @@ if source_img is not None and detect_clicked:
         st.image(raw_img, caption="Raw Image", use_container_width=True)
     with col_detected:
         st.image(res_plotted, caption="Classification Result", use_container_width=True)
+
+# ...existing code...
 
 # ...existing code...
 
