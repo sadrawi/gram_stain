@@ -43,7 +43,7 @@ if not os.path.exists(model_path):
 model = YOLO(model_path)
 
 
-col_upload, col_detect = st.columns([2, 1])
+col_upload, col_detect = st.columns([1, 1])
 
 with col_upload:
     source_img = st.file_uploader(
